@@ -18,6 +18,7 @@ class MainActivity : AppCompatActivity(), LoginNavigator {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        Util.darkenStatusBar(this, R.color.colorPrimaryDark)
         button_login.setOnClickListener {
             val loginViewModel = LoginViewModel(this)
             loginViewModel.onLogin(edit_text_name.text.toString().trim(), edit_text_password.text.toString().trim())
