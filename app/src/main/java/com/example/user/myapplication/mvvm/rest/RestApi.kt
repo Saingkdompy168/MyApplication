@@ -12,12 +12,4 @@ interface RestApi{
     fun postUserLogin(
         @Body loginRequest: LoginRequestModel
     ): Single<LoginResponseModel>
-
-
-
-    @POST("auth/login")
-    fun postUserLogin1(
-        @Body loginRequest: LoginRequestModel
-    )
-
 }
